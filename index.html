@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sachin</title>
+	<!-- <link rel="stylesheet" href="./bootstrap.min.css"> -->
+	<link rel="stylesheet" href="./style.css">
+	<script src="./angular.min.js"></script>
+	<script src="./mainCtrl.js"></script>
+</head>
+<body ng-app="sachin">
+	
+	<section ng-controller="mainCtrl as main">
+		<table border="1">
+		    <thead>
+		    	<tr>
+		    		<th>Batting Score</th>
+		    		<th>Opposition</th>
+		    		<th>Date</th>
+		    		<th>Ground</th>
+		    		<th>Match Result</th>
+		    		<th>Result Margin</th>
+		    		<th>Wickets</th>
+		    	</tr>
+		    </thead>
+			<tbody>
+				<tr ng-repeat="i in main.data track by $index">
+				    <td>{{i.batting_score}}</td>
+				    <td>{{i.opposition}}</td>
+					<td>{{i.date | date:'medium'}}</td>
+					<td>{{i.ground}}</td>
+					<td>{{i.match_result}}</td>
+					<td>{{i.result_margin}}</td>
+					<td>{{i.wickets}}</td>
+			    </td>
+			</tbody>
+		</ul>
+	</section>
+ 
+</body>
+</html>
